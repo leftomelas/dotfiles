@@ -1,0 +1,70 @@
+# theme = "Heisenberg"
+theme = "dark_high_contrast"
+
+[editor]
+line-number = "relative"
+mouse = false
+# Show currently open buffers, only when more than one exists.
+bufferline = "multiple"
+# Highlight all lines with a cursor
+cursorline = true
+# Force the theme to show colors
+true-color = true
+color-modes = true
+auto-completion = true
+auto-save = true
+
+[editor.indent-guides]
+render = true
+character = "┊"
+# skip-levels = 1
+# character = "╎"
+
+[editor.lsp]
+enable = true
+auto-signature-help = true
+display-messages = true
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+right = ["diagnostics", "register", "selections", "position", "position-percentage", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+
+[editor.whitespace.render]
+tab = "all"
+
+# Navigating Buffers with Alt , .
+[keys.normal]
+"A-," = "goto_previous_buffer"
+"A-." = "goto_next_buffer"
+"A-w" = ":buffer-close"
+"A-/" = "repeat_last_motion"
+# "ret" = ["open_below", "normal_mode"]
+C-s = ":w"
+C-o = ":open ~/.config/helix/config.toml"
+
+# Shrink a Line Up with Shift x
+A-x = "extend_to_line_bounds"
+X = ["extend_line_up", "extend_to_line_bounds"]
+
+[keys.insert]
+j = { k = "normal_mode" } # Maps `jk` to exit insert mode
+
+[keys.select]
+A-x = "extend_to_line_bounds"
+X = ["extend_line_up", "extend_to_line_bounds"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 20
+max-indent-retain = 0
+wrap-indicator = ""
+
+[editor.file-picker]
+max-depth = 6 
+hidden = false
