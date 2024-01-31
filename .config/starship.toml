@@ -1,0 +1,15 @@
+
+# Inserts a blank line between shell prompts
+add_newline = false
+[package]
+disabled = true
+
+
+[shlvl]
+disabled = false
+
+[shell]
+disabled = false
+
+[os]
+disabled = false
